@@ -1,0 +1,29 @@
+uuid: a33e993a-1ce4-4b73-8aaf-aab13d490caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_task_priority
+    - node.type.task
+    - taxonomy.vocabulary.task_priority
+id: node.task.field_task_priority
+field_name: field_task_priority
+entity_type: node
+bundle: task
+label: Priority
+description: 'Priority level of the task'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      task_priority: task_priority
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

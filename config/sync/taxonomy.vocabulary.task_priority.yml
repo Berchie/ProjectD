@@ -1,0 +1,8 @@
+uuid: ff96fa6f-94fe-4887-b32e-2da7d88cae03
+langcode: en
+status: true
+dependencies: {  }
+name: 'Task Priority'
+vid: task_priority
+description: 'Priority level'
+weight: 0
