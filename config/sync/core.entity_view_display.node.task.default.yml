@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.task.field_assigned_to
     - field.field.node.task.field_description
     - field.field.node.task.field_due_date
     - field.field.node.task.field_parent_task
     - field.field.node.task.field_project
     - field.field.node.task.field_task_priority
+    - field.field.node.task.field_task_status
     - node.type.task
   module:
     - datetime
@@ -18,6 +20,14 @@ targetEntityType: node
 bundle: task
 mode: default
 content:
+  field_assigned_to:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
   field_description:
     type: text_default
     label: above
@@ -57,6 +67,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 105
+    region: content
+  field_task_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
     region: content
   links:
     settings: {  }
